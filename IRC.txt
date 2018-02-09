@@ -1,0 +1,25 @@
+-------------------------------------------------
+            IRC HEXCHAT Settings
+-------------------------------------------------
+
+Networks
+    freenode (irc.freenode.net)
+    RPISEC IRC (irc.rpis.ec/6667)
+
+Login Method: NickServ(/MSG NickServ + password)
+
+freenode Autojoin channels:
+    ##0day
+    ##kernel
+    #cuda
+    #cutter
+    #devicetree
+    #gsoc
+    #kernel-recipes
+    #micropython
+    #openhatch
+    #python-gsoc
+
+RPISEC Autojoin channels:
+    #rpisec
+
