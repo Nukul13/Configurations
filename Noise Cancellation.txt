@@ -1,0 +1,7 @@
+Microphone Echo cancellation Tutorial
+https://www.youtube.com/watch?v=DHcd-GXgnDM
+
+wget -qO - https://bit.ly/2mBJSJo | sudo bash && pulseaudio -k
+
+Go to System Settings -> Sound -> Input -> select the profile with echo cancelled
+
