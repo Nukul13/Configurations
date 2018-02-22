@@ -15,7 +15,7 @@ import argparse   #Needs to be implemented
 if sys.argv > 1:
     vidFile = open(sys.argv[1], 'r') 
     vidList = vidFile.readlines()
-    f.close()
+    vidFile.close()
     for vid in vidList:
         # Some sort of download failure check
         # if fails retry 5 times
