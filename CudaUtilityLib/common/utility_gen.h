@@ -27,6 +27,19 @@ void swap( T& a, T& b ) {
     b = t;
 }
 
+void printArrayInt(int in[], int N)
+{
+    int i=0;
+    printf("%12d ", in[i]);
+    for (i=1; i<N; i++) {
+        if (i % 5 != 0){
+            printf("%12d ", in[i]);
+        } else {
+            printf("\n\r%12d ", in[i]);
+        }
+    }
+    printf("\n");
+}
 
 void printArray(float in[], int N)
 {
