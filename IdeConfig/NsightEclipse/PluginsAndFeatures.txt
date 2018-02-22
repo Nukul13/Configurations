@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+|                                Plugins                               |    
+------------------------------------------------------------------------
+
+Note: First install Eclipse Marketplace
+    Help -> Install Software -> All available sites 
+    -> Search "Marketplace" and install it.
+
+
+CppCheck: 
+---------
+1. sudo apt install cppcheck
+2. Goto Marketplace -> Search "cppcheclipse" and install it.
+3. Goto Preferences -> C/C++ -> cppcheclipse (provide bin path first)
+    now expand menu -> Problems (Set as required)
+                    -> Settings :
+                        -> Check for all known issues (all)
+                        -> Enable inconclusive checks
+                        -> C and C++ Language Standard = C11 and C++11
+
+clang-tidy (Not yet tried):
+-----------
+1. Install Clang 
+2. Follow instruction https://github.com/Ericsson/CodeCheckerEclipsePlugin
+    Depends: Install https://github.com/Ericsson/codechecker
