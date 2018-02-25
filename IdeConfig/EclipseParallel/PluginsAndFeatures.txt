@@ -1,0 +1,20 @@
+------------------------------------------------------------------------
+|                                Plugins                               |    
+------------------------------------------------------------------------
+
+CppCheck: 
+---------
+1. sudo apt install cppcheck
+2. Goto Marketplace -> Search "cppcheclipse" and install it.
+3. Goto Preferences -> C/C++ -> cppcheclipse (provide bin path first)
+    now expand menu -> Problems (Set as required)
+                    -> Settings :
+                        -> Check for all known issues (all)
+                        -> Enable inconclusive checks
+                        -> C and C++ Language Standard = C11 and C++11
+4. Go to project Properties -> C/C++ Build -> Settings -> Compiler
+                                                       -> Dialect [set ISO C++11]
+5. Go to project Properties -> cppcheclipse -> Advanced Settings
+    -> add in command line arguments "--suppress=missingIncludeSystem"
+    then go to cppcheclipse -> Build [Tick = Run on build]
+

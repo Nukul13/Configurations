@@ -1,7 +1,9 @@
 #ifndef __UTILITY_GEN_H__
 #define __UTILITY_GEN_H__
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cuda.h>
+#include <cuda_runtime_api.h>
 
 static void HandleError( cudaError_t err,
                          const char *file,
