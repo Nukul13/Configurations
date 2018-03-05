@@ -5,3 +5,6 @@ wget -qO - https://bit.ly/2mBJSJo | sudo bash && pulseaudio -k
 
 Go to System Settings -> Sound -> Input -> select the profile with echo cancelled
 
+To revert back default profile
+sudo rm /etc/pulse/default.pa
+sudo cp /etc/pulse/default.pa.bak /etc/pulse/default.pa
