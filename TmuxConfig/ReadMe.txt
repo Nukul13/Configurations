@@ -47,6 +47,14 @@ set -g @plugin 'tmux-plugins/tmux-yank'
 
 #Restores Tmux session saved by continuum
 set -g @continuum-restore 'on'
+
+#Restores shell history by resurrect 
+#only those that dont have foreground ps running
+set -g @resurrect-save-shell-history 'on'
+
+#Restores Pane Contents
+set -g @resurrect-capture-pane-contents 'on'
+#set -g default-command "reattach-to-user-namespace -l $SHELL"
 --------------------------------------------
 
 To install and activate plugin:
