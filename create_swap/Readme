@@ -1,0 +1,35 @@
+#Connect pendrive or harddisk and create a folder for swap (or can be created on jetson tx2 also)
+	mkdir swapdir
+	cd swapdir
+#Create a swapfile for Ubuntu at the current directory location
+	fallocate -l 8G swapfile
+#List out the file
+	ls -lh swapfile
+# Change permissions so that only root can use it
+	sudo chmod 600 swapfile
+#List out the file
+	ls -lh swapfile
+#Set up the Linux swap area
+	sudo mkswap swapfile
+#Now start using the swapfile
+	sudo swapon swapfile
+#Show that it's now being used
+	swapon -s
+#(Optional) To delete swapfile
+    swapoff swapfile
+    sudo rm swapfile
+#Check that it's now removed
+    swapon -s
+
+OR 
+
+#Use script createSwapfile.sh for creating and mounting swap file
+#To build a 8GB swapfile on the eMMC in the home directory (mkdir ~/swapdisk):
+./createSwapfile.sh -d ~/swapdisk -s 8
+
+#for pendrive
+./createSwapfile.sh -d /media/<pendrive mounted folder> -s 8
+
+
+
+
