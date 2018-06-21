@@ -4,10 +4,6 @@
 
 Kaggle CLI Usage - https://github.com/floydwch/kaggle-cli
 
-Paperspace fastai docker: https://github.com/Paperspace/fastai-docker
-
-Another fastai docker: https://github.com/MattKleinsmith/dockerfiles/tree/master/fastai
-
 
 --------------------------------------------------------------------
                             Resources
@@ -15,6 +11,8 @@ Another fastai docker: https://github.com/MattKleinsmith/dockerfiles/tree/master
 Explained Visually (Image kernels, PCA, etc): http://setosa.io/ev/
 
 Neural Network and deep learning by Michael Nielsen: http://neuralnetworksanddeeplearning.com/
+
+Amazing stuff on ML, DL and molecular biology: https://sebastianraschka.com/
 
 Linear algebra cheat sheet: https://towardsdatascience.com/linear-algebra-cheat-sheet-for-deep-learning-cd67aba4526c
 
