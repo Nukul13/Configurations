@@ -18,3 +18,5 @@ CppCheck:
     -> add in command line arguments "--suppress=missingIncludeSystem"
     then go to cppcheclipse -> Build [Tick = Run on build]
 
+For clang:
+https://stackoverflow.com/questions/32726175/unable-to-install-llvm-toolchain-for-eclipse-cdt

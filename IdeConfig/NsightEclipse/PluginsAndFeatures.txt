@@ -23,3 +23,6 @@ clang-tidy (Not yet tried):
 1. Install Clang 
 2. Follow instruction https://github.com/Ericsson/CodeCheckerEclipsePlugin
     Depends: Install https://github.com/Ericsson/codechecker
+    
+For clang:
+https://stackoverflow.com/questions/32726175/unable-to-install-llvm-toolchain-for-eclipse-cdt
