@@ -1,5 +1,6 @@
 '''
 Guide for usage:
+[Ref](https://medium.com/tinghaochen/how-to-download-files-from-google-drive-through-terminal-4a6802707dbb)
 In your terminal, run the command:
 
 python download_gdrive.py GoogleFileID /path/for/this/file/to/download/file.type
