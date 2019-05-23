@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Alignment",
+		"C++ Snippets",
+		"CMakeSnippets",
+		"ColorPicker",
+		"CUDA Snippets",
+		"DocBlockr",
+		"DocBlockr_Python",
+		"Emmet",
+		"Gist",
+		"Git",
+		"Git blame",
+		"GitGutter",
+		"HTML Snippets",
+		"MySQL Snippets",
+		"PyQt5 Completions",
+		"Pytest Snippets",
+		"Qt Completions for C++",
+		"Random Everything",
+		"Ros Snippets",
+		"SideBarEnhancements",
+		"SideBarMenuAdvanced",
+		"SublimeREPL"
+	]
+}
