@@ -30,7 +30,7 @@ git -C src/image_pipeline checkout bugfix
 catkin_make
 
 ## ros-lab:v4
-apt-get insall tree
+apt-get insall tree tig
 sublime install gitsavvy
 
 
