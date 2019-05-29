@@ -49,7 +49,33 @@ catkin_make
 apt update
 apt-get install tree tig nmap gdebi-core evince
 apt-get install python-dev python3-dev texlive
+```
 
+- Setup clang-8
+- Add LLVM repo `subl /etc/apt/sources.list`
+```
+deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-8 main
+deb-src http://apt.llvm.org/bionic/ llvm-toolchain-bionic-8 main
+```
+- Now update repo and start installing
+```
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key| apt-key add -
+apt update
+apt-get install clang-8 lldb-8 lld-8
+# LLVM
+apt-get install libllvm-8-ocaml-dev libllvm8 llvm-8 llvm-8-dev llvm-8-doc llvm-8-examples llvm-8-runtime
+# Clang and co
+apt-get install clang-8 clang-tools-8 clang-8-doc libclang-common-8-dev libclang-8-dev libclang1-8 clang-format-8 python-clang-8
+# libfuzzer
+apt-get install libfuzzer-8-dev
+# lldb
+apt-get install lldb-8
+# lld (linker)
+apt-get install lld-8
+# libc++
+apt-get install libc++-8-dev libc++abi-8-dev
+# OpenMP
+apt-get install libomp-8-dev
 ```
 
 - Install nodejs
