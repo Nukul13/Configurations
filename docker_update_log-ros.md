@@ -125,3 +125,32 @@ cat ~/.spacevim
 cd ~/.vim/plugged/YouCompleteMe 
 python3 install.py --clang-completer
 ```
+
+## ros-lab:v5
+- More Clang utility and config
+```
+apt update
+apt install clang-tidy-8
+
+ln -s /usr/bin/clang-8 /usr/bin/clang
+ln -s /usr/bin/clang++-8 /usr/bin/clang++
+ln -s /usr/bin/llvm-ar-8 /usr/bin/llvm-ar
+ln -s /usr/bin/llvm-as-8 /usr/bin/llvm-as
+ln -s /usr/bin/clangd-8 /usr/bin/clangd
+ln -s /usr/bin/clang-tidy-8 /usr/bin/clang-tidy
+```
+
+- For C++ Code completion use clangd - (refer this for sublime and vim setup)[https://clang.llvm.org/extra/clangd/Installation.html]
+- sublime remove YCM
+- sublime install LSP
+
+- Vim C-family autocompletion using clangd
+```
+#vim recompile ~/.vim/plugged/YouCompleteMe 
+cd ~/.vim/plugged/YouCompleteMe/
+python3 install.py --clang-completer --clangd-completer --system-libclang --core-tests
+```
+- To put ros includes in path /usr/local/include (This folder was default empty)
+`ln -s /opt/ros/melodic/include/* /usr/local/include/`
+
+- Now sublime and vim(~/.vimrc) are configured to locate ros autocompletion
