@@ -39,15 +39,63 @@ catkin_make
 
 ## ros-lab:v4
 - sublime install gitsavvy and remove Git package
-- `apt-get insall tree tig`
+- sublime jedi (python auto completion)
+- sublime ycmdCompletion (optional)
+
 - In tmux activate plugins by "prefix + I" to fetch plugin and source it. So resurrect works for saving and restoring(prefix+C+s and prefix+C+r). also continum will autorestore.
 
-- Setup vim & nvim as python ide (https://spacevim.org/use-vim-as-a-python-ide/)
-- 
+- Install packages for vim plugins and utilities
+```
+apt update
+apt-get install tree tig nmap gdebi-core evince
+apt-get install python-dev python3-dev texlive
 
-Uninstall spacevim
-curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall
-rm -rf ~/.space-vim/
-rm -rf ~/.spacevim
+```
 
-For Spacevim setup https://github.com/EwanValentine/spacevim-setup
+- Install nodejs
+```
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt install nodejs
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+apt-get update && apt-get install yarn
+
+npm install -g neovim
+```
+
+- For Installing space-vim (plugins)[https://github.com/liuchengxu/space-vim/blob/master/layers/LAYERS.md]. See Layer Usages and Pre-requisites for setting up keybindings and other configurations.
+
+- Python Packages for plugins
+```
+pip install jedi pynvim
+pip3 install flake8 jedi pynvim 
+```
+
+- For Latex preview plugin
+`ln -s /usr/bin/evince /usr/bin/acroread`
+
+- copy `spacevim` file from configurations to file `~/.spacevim` and replace it.
+```
+rm ~/.spacevim
+cp spacevim ~/.spacevim
+#make sure its correct
+cat ~/.spacevim    
+```
+
+- Now run vim
+```
+:PlugInstall
+:PlugStatus
+```
+- Now run nvim
+```
+:PlugInstall
+:PlugStatus
+:checkhealth
+```
+
+- Setting up ycmd for vim
+```
+cd ~/.vim/plugged/YouCompleteMe 
+python3 install.py --clang-completer
+```
