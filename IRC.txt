@@ -19,6 +19,8 @@ freenode Autojoin channels:
     #micropython
     #openhatch
     #python-gsoc
+    #streaminterrupt
+    #ros
 
 RPISEC Autojoin channels:
     #rpisec
