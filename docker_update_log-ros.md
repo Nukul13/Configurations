@@ -153,4 +153,11 @@ python3 install.py --clang-completer --clangd-completer --system-libclang --core
 - To put ros includes in path /usr/local/include (This folder was default empty)
 `ln -s /opt/ros/melodic/include/* /usr/local/include/`
 
-- Now sublime and vim(~/.vimrc) are configured to locate ros autocompletion
+- Now sublime and `vim(~/.vimrc)` are configured to locate ros autocompletion
+
+
+## ros-lab:v6
+git config --global user.email "dwijaybane2@gmail.com"
+git config --global user.name "Dwijay Bane"
+
+
