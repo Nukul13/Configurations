@@ -161,3 +161,11 @@ git config --global user.email "dwijaybane2@gmail.com"
 git config --global user.name "Dwijay Bane"
 
 
+Entry point zsh and docker commit to make it default
+zsh plugins [tmux git-flow sudo tig autosuggestion syntax-highlighting]
+[git flow setup and Doc](https://github.com/nvie/gitflow)
+Also tmux plugin should be rearranged
+
+apt install ack cmake-curses-gui cmake-qt-gui
+
+
