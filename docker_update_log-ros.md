@@ -168,4 +168,5 @@ Also tmux plugin should be rearranged
 
 apt install ack cmake-curses-gui cmake-qt-gui
 
+vim ycmd python support 
 
