@@ -166,7 +166,7 @@ zsh plugins [tmux git-flow sudo tig autosuggestion syntax-highlighting]
 [git flow setup and Doc](https://github.com/nvie/gitflow)
 Also tmux plugin should be rearranged
 
-apt install ack cmake-curses-gui cmake-qt-gui
+apt install less ack cmake-curses-gui cmake-qt-gui
 
 vim ycmd python support 
 
