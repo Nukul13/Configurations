@@ -159,14 +159,18 @@ python3 install.py --clang-completer --clangd-completer --system-libclang --core
 ## ros-lab:v6
 git config --global user.email "dwijaybane2@gmail.com"
 git config --global user.name "Dwijay Bane"
-
+git config --global core.editor "subl -n -w"
 
 Entry point zsh and docker commit to make it default
 zsh plugins [tmux git-flow sudo tig autosuggestion syntax-highlighting]
 [git flow setup and Doc](https://github.com/nvie/gitflow)
 Also tmux plugin should be rearranged
 
-apt install less ack cmake-curses-gui cmake-qt-gui
+apt install locate less ack cmake-curses-gui cmake-qt-gui
 
 vim ycmd python support 
+
+//add following to .zshrc and .bashrc
+`alias autokey='apt-get update 2> /tmp/keymissing; for key in $(grep "NO_PUBKEY" /tmp/keymissing |sed "s/.*NO_PUBKEY //"); do echo -e "\nProcessing key: $key"; gpg --keyserver pool.sks-keyservers.net --recv $key && gpg --export --armor $key | apt-key add -; done'`
+
 
