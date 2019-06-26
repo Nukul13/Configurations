@@ -161,16 +161,65 @@ git config --global user.email "dwijaybane2@gmail.com"
 git config --global user.name "Dwijay Bane"
 git config --global core.editor "subl -n -w"
 
-Entry point zsh and docker commit to make it default
-zsh plugins [tmux git-flow sudo tig autosuggestion syntax-highlighting]
+zsh plugins [tmux git-flow sudo tig zsh-autosuggestions zsh-syntax-highlighting]
 [git flow setup and Doc](https://github.com/nvie/gitflow)
 Also tmux plugin should be rearranged
 
-apt install locate less ack cmake-curses-gui cmake-qt-gui
+sublime -> jedi removed and added anaconda
 
-vim ycmd python support 
+apt install locate tree less ack cmake-curses-gui cmake-qt-gui usbutils
+
+pip install jupyter
+pip3 install jupyter matplotlib ipython
+
+vim ycmd python support
 
 //add following to .zshrc and .bashrc
 `alias autokey='apt-get update 2> /tmp/keymissing; for key in $(grep "NO_PUBKEY" /tmp/keymissing |sed "s/.*NO_PUBKEY //"); do echo -e "\nProcessing key: $key"; gpg --keyserver pool.sks-keyservers.net --recv $key && gpg --export --armor $key | apt-key add -; done'`
 
+libfreenect -> make install
+```
+cd /notebook
+git clone git://github.com/OpenKinect/libfreenect.git
+cd libfreenect
+mkdir build
+python src/fwfetcher.py  // 111mb so have patience
 
+// Open the file `usb_libusb10.c` as shown below and comment/remove line 443 i.e, `fnusb_keep_alive_led(ctx, audio)`:
+subl src/usb_libusb10.c
+
+// Open the `CmakeLists.txt` file and add the following line on line 40 ,i.e, after the line `PROJECT(libfreenect)`:
+set (CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+
+// Build libfreenect
+cd build
+cmake -D BUILD_PYTHON=ON -D BUILD_PYTHON2=ON -D BUILD_PYTHON3=ON ..
+cp ../audio.bin bin/
+make -j4
+// To test do this: cd bin/ -> ./freenect-camtest (if this works do next step) -> ./freenect-glview
+make install
+ldconfig /usr/local/lib
+// Now try running: cd /notebook -> freenect-glview
+// In this setup we skipped copying: "cp $HOME/platform/linux/udev/51-kinect.rules /etc/udev/rules.d/"
+```
+
+For bashrc and zshrc: [CPP ENV](https://gcc.gnu.org/onlinedocs/cpp/Environment-Variables.html)
+```
+# ROS Include
+export CPATH=/opt/ros/melodic/include/:$CPATH
+OR
+export CPATH=/opt/ros/kinetic/include/:$CPATH
+
+# For Custom Built Libraries
+export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+
+# Catkin_ws Package include
+export CPATH=/notebooks/catkin_ws/devel/include:$CPATH
+
+#Catkin_ws Package Source
+source /notebooks/catkin_ws/devel/setup.bash
+OR
+source /notebooks/catkin_ws/devel/setup.zsh
+```
+
+## ros-lab:v7
