@@ -1,0 +1,47 @@
+# Install latest python3.7 (Not recommended: some issues exist)
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+
+# Install pip3 using curl 
+curl -sS https://bootstrap.pypa.io/get-pip.py | sudo python3
+OR (for python3.7 #not recommended)
+curl -sS https://bootstrap.pypa.io/get-pip.py | sudo python3.7 
+
+# Above step will make pip -V link python3 we need to unlink that
+sudo python -m pip install -U --force-reinstall pip
+
+# Now upgrade pip2 jupyter
+sudo pip install -U jupyter  
+
+# Install pip3 jupyter
+sudo pip3 install jupyter
+
+# Install Python3 kernel for jupyter
+sudo ipython3 kernelspec install-self  
+
+# Check all kernels for jupyter
+jupyter kernelspec list 
+
+
+
+====================
+   Troubleshoot
+====================
+I just tried to install python 3.7 on my Ubuntu 16.04 system, and now I cant run the terminal from the launcher or from Ctrl+Alt+T. I tried to run gnome-terminal from XTerm and got the following message:
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/bin/gnome-terminal", line 9, in <module>
+    from gi.repository import GLib, Gio
+  File "/usr/lib/python3/dist-packages/gi/__init__.py", line 42, in <module>
+    from . import _gi
+ImportError: cannot import name '_gi'
+----------------------------------------------------------------------
+
+Solution:
+You don't have to point Python3 to python3.5 , just running the commands: cd /usr/lib/python3/dist-packages/gi/
+sudo cp _gi.cpython-35m-x86_64-linux-gnu.so _gi.cpython-37m-x86_64-linux-gnu.so 
+sudo cp _gi_cairo.cpython-35m-x86_64-linux-gnu.so _gi_cairo.cpython-37m-x86_64-linux-gnu.so
+
+Alt Sol(Not recommended):
+sudo rm /usr/bin/python3
+sudo ln -s python3.5 /usr/bin/python3
