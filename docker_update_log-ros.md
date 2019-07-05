@@ -4,7 +4,7 @@
 - System setup
 
 ## ros-lab:v2
-Simple utilities and configurations (vim, tmux, zsh, python, sublime, etc)
+Simple utilities and configurations (vim, tmux, zsh, python, sublime, xclip, etc)
 
 ## ros-lab:v3
 - remove tabs from sublime
